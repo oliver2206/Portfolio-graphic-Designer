@@ -1,4 +1,3 @@
- \
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +7,7 @@
     <title>Hero Section with Video</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -31,24 +31,20 @@
             width: 100%;
             z-index: 10;
             background-color: #ffffff;
-            /* WHITE NAVBAR */
         }
         
         .navbar-brand {
             color: #3391ff !important;
-            /* BLUE BRAND */
         }
         
         .navbar-nav .nav-link {
             color: #3391ff;
-            /* BLUE LINKS */
             font-weight: bold;
             transition: color 0.3s ease;
         }
         
         .navbar-nav .nav-link:hover {
             color: #000000;
-            /* BLACK ON HOVER */
         }
         
         .navbar-toggler {
@@ -61,7 +57,6 @@
         
         .navbar-toggler .bi {
             color: #3391ff;
-            /* BLUE ICON */
         }
         
         .hero {
@@ -109,19 +104,16 @@
         .hero-text h3 {
             font-size: 1.5rem;
             color: #3391ff;
-            /* BLUE INTRO */
         }
         
         .hero-text h1 {
             font-size: 3rem;
             margin: 10px 0;
             color: #3391ff;
-            /* BLUE MAIN TITLE */
         }
         
         .highlight {
             color: #3391ff;
-            /* BLUE TYPING TEXT */
         }
         
         .btn {
@@ -131,9 +123,7 @@
             padding: 12px 24px;
             border: 2px solid #3391ff;
             background-color: #3391ff;
-            /* BLUE BG */
             color: #ffffff;
-            /* WHITE TEXT */
             text-decoration: none;
             font-weight: 500;
             border-radius: 4px;
@@ -142,7 +132,6 @@
         
         .btn:hover {
             background-color: #2673cc;
-            /* DARKER BLUE ON HOVER */
             color: #ffffff;
         }
         
@@ -177,7 +166,6 @@
             bottom: 30px;
             right: 30px;
             background-color: #3391ff;
-            /* BLUE BACKGROUND */
             color: white;
             border: none;
             border-radius: 50%;
@@ -192,98 +180,127 @@
         #scrollToTopBtn:hover {
             background-color: #2673cc;
         }
+        
+        .mobile-nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            z-index: 9999;
+            display: none;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: all 0.3s ease;
+            padding: 20px;
+        }
+        
+        .mobile-nav-overlay.active {
+            display: flex;
+        }
+        
+        .mobile-nav-overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2.5rem;
+            cursor: pointer;
+            color: #3391ff;
+            background: none;
+            border: none;
+        }
+        
+        .mobile-nav-overlay .social-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-right: 50px;
+        }
+        
+        .mobile-nav-overlay .social-icons a {
+            font-size: 2rem;
+            color: #3391ff;
+            transition: color 0.3s ease;
+        }
+        
+        .mobile-nav-overlay .social-icons a:hover {
+            color: #000;
+        }
+        
+        .mobile-nav-overlay .nav-links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .mobile-nav-overlay .nav-links a {
+            font-size: 1.5rem;
+            margin: 15px 0;
+            color: #3391ff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .mobile-nav-overlay .nav-links a:hover {
+            color: #000000;
+        }
+        
+        @media (min-width: 992px) {
+            .mobile-nav-overlay {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Header with Responsive Navbar -->
+    <!-- Header -->
     <header>
         <nav class="navbar navbar-expand-lg container-fluid px-5">
             <a class="navbar-brand fw-bold" href="#">MySite</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" onclick="toggleMobileNav()">
         <span class="bi bi-list fs-1"></span>
       </button>
-
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navbarNav">
                 <ul class="navbar-nav">
-
-                    <!-- Home -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#home" role="button" data-bs-toggle="dropdown">Home</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#home-overview">Overview</a></li>
-                            <li><a class="dropdown-item" href="#home-intro">Introduction</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- About -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#about" role="button" data-bs-toggle="dropdown">About</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#about-me">About Me</a></li>
-                            <li><a class="dropdown-item" href="#about-mission">Mission</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Services -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#services" role="button" data-bs-toggle="dropdown">Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#web-dev">Web Development</a></li>
-                            <li><a class="dropdown-item" href="#graphic-design">Graphic Design</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Experience -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#experience" role="button" data-bs-toggle="dropdown">Experience</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#education">Education</a></li>
-                            <li><a class="dropdown-item" href="#work-experience">Work Experience</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Gallery -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#gallery" role="button" data-bs-toggle="dropdown">Gallery</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#photo-gallery">Photos</a></li>
-                            <li><a class="dropdown-item" href="#video-gallery">Videos</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Testimonials -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#testimonials" role="button" data-bs-toggle="dropdown">Testimonials</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#client-feedback">Client Feedback</a></li>
-                            <li><a class="dropdown-item" href="#partner-reviews">Partner Reviews</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Contact -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#contact" role="button" data-bs-toggle="dropdown">Contact</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#contact-form">Contact Form</a></li>
-                            <li><a class="dropdown-item" href="#location">Location</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Portfolio -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#portfolio" role="button" data-bs-toggle="dropdown">Portfolio</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#portfolio-web">Web Projects</a></li>
-                            <li><a class="dropdown-item" href="#portfolio-design">Design Projects</a></li>
-                        </ul>
-                    </li>
-
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileNav" class="mobile-nav-overlay">
+        <button class="close-btn" onclick="toggleMobileNav()">&times;</button>
+        <div class="social-icons">
+            <a href="https://www.behance.net/" target="_blank"><i class="bi bi-behance"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+        </div>
+        <div class="nav-links">
+            <a href="#home" onclick="toggleMobileNav()">Home</a>
+            <a href="#about" onclick="toggleMobileNav()">About</a>
+            <a href="#services" onclick="toggleMobileNav()">Services</a>
+            <a href="#experience" onclick="toggleMobileNav()">Experience</a>
+            <a href="#gallery" onclick="toggleMobileNav()">Gallery</a>
+            <a href="#testimonials" onclick="toggleMobileNav()">Testimonials</a>
+            <a href="#contact" onclick="toggleMobileNav()">Contact</a>
+            <a href="#portfolio" onclick="toggleMobileNav()">Portfolio</a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -323,7 +340,6 @@
             </div>
         </div>
     </div>
-
 
 
     <!-- About Section -->
@@ -940,6 +956,8 @@
             </style>
 
 
+
+
             <!-- Scripts -->
             <script>
                 const textList = ['UI/UX Designer', 'Photo Retoucher', 'Marketing Artist'];
@@ -962,6 +980,7 @@
                         setTimeout(type, isDeleting ? 50 : 100);
                     }
                 }
+
                 document.addEventListener("DOMContentLoaded", type);
 
                 document.addEventListener("DOMContentLoaded", () => {
@@ -977,21 +996,19 @@
                 const heroVideo = document.getElementById("hero-video");
                 const heroAudio = document.getElementById("hero-audio");
 
-                const observer = new IntersectionObserver(
-                    (entries) => {
-                        entries.forEach((entry) => {
-                            if (entry.isIntersecting) {
-                                heroVideo.play();
-                                heroAudio.play().catch(() => {});
-                            } else {
-                                heroVideo.pause();
-                                heroAudio.pause();
-                            }
-                        });
-                    }, {
-                        threshold: 0.5
-                    }
-                );
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            heroVideo.play();
+                            heroAudio.play().catch(() => {});
+                        } else {
+                            heroVideo.pause();
+                            heroAudio.pause();
+                        }
+                    });
+                }, {
+                    threshold: 0.5
+                });
 
                 observer.observe(heroSection);
 
@@ -1002,6 +1019,10 @@
                         behavior: 'smooth'
                     });
                 });
+
+                function toggleMobileNav() {
+                    document.getElementById("mobileNav").classList.toggle("active");
+                }
             </script>
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
