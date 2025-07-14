@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hero Section with Video</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-
+    <title>Hero Section with Responsive Video</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
     <style>
         * {
             margin: 0;
@@ -21,8 +20,8 @@
         
         body {
             font-family: 'Segoe UI', sans-serif;
-            background-color: #00000000;
-            color: rgba(198, 30, 30, 0.825);
+            background: #000;
+            color: #fff;
         }
         
         header {
@@ -30,7 +29,7 @@
             top: 0;
             width: 100%;
             z-index: 10;
-            background-color: #ffffff;
+            background: #fff;
         }
         
         .navbar-brand {
@@ -44,7 +43,7 @@
         }
         
         .navbar-nav .nav-link:hover {
-            color: #000000;
+            color: #000;
         }
         
         .navbar-toggler {
@@ -58,24 +57,24 @@
         .navbar-toggler .bi {
             color: #3391ff;
         }
+        /* HERO SECTION */
         
         .hero {
             position: relative;
-            height: 100vh;
             display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            justify-content: flex-start;
-            padding: 80px 10%;
-            color: rgba(255, 255, 255, 0.879);
+            min-height: 100vh;
+            width: 100%;
             overflow: hidden;
+            padding: 60px 10%;
+            text-align: center;
         }
         
         .hero-video-container {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            inset: 0;
             z-index: 0;
             overflow: hidden;
         }
@@ -84,14 +83,15 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
         
         .hero-video-container .overlay {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            inset: 0;
             background: rgba(0, 0, 0, 0.5);
         }
         
@@ -99,6 +99,7 @@
             position: relative;
             z-index: 1;
             max-width: 600px;
+            color: #fff;
         }
         
         .hero-text h3 {
@@ -122,26 +123,27 @@
             gap: 10px;
             padding: 12px 24px;
             border: 2px solid #3391ff;
-            background-color: #3391ff;
-            color: #ffffff;
+            background: #3391ff;
+            color: #fff;
             text-decoration: none;
             font-weight: 500;
             border-radius: 4px;
-            transition: background-color 0.3s ease;
+            transition: background 0.3s ease;
         }
         
         .btn:hover {
-            background-color: #2673cc;
-            color: #ffffff;
+            background: #2673cc;
         }
         
         @media (max-width: 768px) {
-            .hero {
-                flex-direction: column-reverse;
-                text-align: center;
-            }
             .hero-text h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
+            }
+            .hero-text h3 {
+                font-size: 1.2rem;
+            }
+            .hero {
+                padding: 40px 5%;
             }
         }
         
@@ -165,8 +167,8 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background-color: #3391ff;
-            color: white;
+            background: #3391ff;
+            color: #fff;
             border: none;
             border-radius: 50%;
             width: 50px;
@@ -178,7 +180,7 @@
         }
         
         #scrollToTopBtn:hover {
-            background-color: #2673cc;
+            background: #2673cc;
         }
         
         .mobile-nav-overlay {
@@ -187,7 +189,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: #ffffff;
+            background: #fff;
             z-index: 9999;
             display: none;
             flex-direction: row;
@@ -247,7 +249,7 @@
         }
         
         .mobile-nav-overlay .nav-links a:hover {
-            color: #000000;
+            color: #000;
         }
         
         @media (min-width: 992px) {
@@ -259,7 +261,6 @@
 </head>
 
 <body>
-
     <!-- Header -->
     <header>
         <nav class="navbar navbar-expand-lg container-fluid px-5">
@@ -267,7 +268,7 @@
             <button class="navbar-toggler" type="button" onclick="toggleMobileNav()">
         <span class="bi bi-list fs-1"></span>
       </button>
-            <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
@@ -282,7 +283,7 @@
         </nav>
     </header>
 
-    <!-- Mobile Menu -->
+    <!-- Mobile Nav -->
     <div id="mobileNav" class="mobile-nav-overlay">
         <button class="close-btn" onclick="toggleMobileNav()">&times;</button>
         <div class="social-icons">
@@ -323,7 +324,7 @@
     </audio>
     </section>
 
-    <!-- Scroll to Top Button -->
+    <!-- Scroll To Top -->
     <button id="scrollToTopBtn" title="Go to top">↑</button>
 
     <!-- Resume Modal -->
@@ -347,7 +348,7 @@
         <!-- Left Side: Background Image with Overlay Text -->
         <div class="about-left">
             <div class="about-text">
-              
+
             </div>
         </div>
 
@@ -1032,7 +1033,6 @@
 
 
 
-
             <!-- Scripts -->
             <script>
                 const textList = ['UI/UX Designer', 'Photo Retoucher', 'Marketing Artist'];
@@ -1063,7 +1063,7 @@
                     const unlockAudio = () => {
                         audio.play().catch(() => {});
                         document.removeEventListener("click", unlockAudio);
-                    }
+                    };
                     document.addEventListener("click", unlockAudio);
                 });
 
@@ -1087,8 +1087,7 @@
 
                 observer.observe(heroSection);
 
-                const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-                scrollToTopBtn.addEventListener("click", () => {
+                document.getElementById("scrollToTopBtn").addEventListener("click", () => {
                     window.scrollTo({
                         top: 0,
                         behavior: 'smooth'
