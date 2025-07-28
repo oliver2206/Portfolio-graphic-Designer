@@ -301,7 +301,7 @@
         </div>
     </div>
 
-   <!-- HERO SECTION -->
+    <!-- HERO SECTION -->
     <section id="hero">
         <div class="button-grid">
             <a href="#video-editing"><button class="glow-button">Video Editing</button></a>
@@ -314,89 +314,101 @@
             <a href="#photo-restoration"><button class="glow-button">Photo Restoration</button></a>
         </div>
     </section>
+    <!-- TARGET SECTIONS -->
+    <section id="video-editing" class="content-section">
+        <h2>Video Editing</h2>
+        <p>Details about video editing...</p>
+    </section>
 
-  <!-- TARGET SECTIONS -->
-<section id="video-editing" class="content-section">
-  <h2>Video Editing</h2>
-  <p>Details about video editing...</p>
-</section>
+    <section id="photo-editing" class="content-section">
+        <div class="photo-editing-container">
+            <div class="gallery-title">
+                <h2>Graphic Design & Edits</h2>
+            </div>
+            <div class="gallery-grid">
+                <img src="./PNGFILE/after.png" alt="Edit 1">
+                <img src="img2.jpg" alt="Edit 2">
+                <img src="img3.jpg" alt="Edit 3">
+                <img src="img4.jpg" alt="Edit 4">
+                <img src="img5.jpg" alt="Edit 5">
+                <img src="img6.jpg" alt="Edit 6">
+                <img src="img7.jpg" alt="Edit 7">
+                <img src="img8.jpg" alt="Edit 8">
+                <img src="img9.jpg" alt="Edit 9">
+                <img src="img10.jpg" alt="Edit 10">
+                <img src="img11.jpg" alt="Edit 11">
+                <img src="img12.jpg" alt="Edit 12">
+                <img src="img13.jpg" alt="Edit 13">
+                <img src="img14.jpg" alt="Edit 14">
+                <img src="img15.jpg" alt="Edit 15">
+                <img src="img16.jpg" alt="Edit 16">
+            </div>
+        </div>
 
-<section id="photo-editing" class="content-section">
-  <div class="photo-editing-container">
-    <div class="gallery-grid">
-      <img src="./PNGFILE/after.png" alt="Edit 1">
-      <img src="img2.jpg" alt="Edit 2">
-      <img src="img3.jpg" alt="Edit 3">
-      <img src="img4.jpg" alt="Edit 4">
-      <img src="img5.jpg" alt="Edit 5">
-      <img src="img6.jpg" alt="Edit 6">
-      <img src="img7.jpg" alt="Edit 7">
-      <img src="img8.jpg" alt="Edit 8">
-      <img src="img9.jpg" alt="Edit 9">
-      <img src="img10.jpg" alt="Edit 10">
-      <img src="img11.jpg" alt="Edit 11">
-      <img src="img12.jpg" alt="Edit 12">
-      <img src="img13.jpg" alt="Edit 13">
-      <img src="img14.jpg" alt="Edit 14">
-      <img src="img15.jpg" alt="Edit 15">
-      <img src="img16.jpg" alt="Edit 16">
-    </div>
-    <div class="gallery-title">
-      <h2>Graphic Design & Edits</h2>
-    </div>
-  </div>
-
-  <style>
-    .content-section {
-     
-      background-color: #f5efdd;
-      font-family: Arial, sans-serif;
-    }
-
-    .photo-editing-container {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      gap: 40px;
-    }
-
-    .gallery-title {
-      flex: 1;
-    
-    }
-
-    .gallery-title h2 {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-top: 0;
-    }
-
-    .gallery-grid {
-      display: grid;
-      flex: 3;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery-grid img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    @media (max-width: 768px) {
-      .photo-editing-container {
-        flex-direction: column-reverse;
-      }
-
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  </style>
-</section>
+        <style>
+            .content-section {
+                padding: 60px 20px;
+                background-color: #f5efdd;
+                font-family: Arial, sans-serif;
+            }
+            
+            .photo-editing-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 40px;
+                align-items: flex-start;
+                justify-content: center;
+            }
+            
+            .gallery-title {
+                flex: 1 1 100%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            
+            .gallery-title h2 {
+                font-size: 2rem;
+                font-weight: bold;
+                margin: 0;
+            }
+            
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 20px;
+                width: 100%;
+                justify-items: center;
+            }
+            
+            .gallery-grid img {
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s;
+            }
+            
+            .gallery-grid img:hover {
+                transform: scale(1.05);
+            }
+            
+            @media (max-width: 768px) {
+                .gallery-title h2 {
+                    font-size: 1.5rem;
+                }
+                .gallery-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                .gallery-grid img {
+                    width: 100%;
+                    height: auto;
+                    max-width: 200px;
+                    max-height: 200px;
+                }
+            }
+        </style>
+    </section>
 
 
     <section id="ui-ux" class="content-section">
@@ -459,8 +471,8 @@
 
         sections.forEach(section => observer.observe(section));
     </script>
-<style>
-   html {
+    <style>
+        html {
             scroll-behavior: smooth;
         }
         
@@ -533,79 +545,78 @@
                 grid-template-columns: 1fr;
             }
         }
-
-</style>
+    </style>
 </body>
-   
 
 
-            <!-- Scripts -->
-            <script>
-                const textList = ['UI/UX Designer', 'Photo Retoucher', 'Marketing Artist'];
-                const typingText = document.getElementById('typing-text');
-                let wordIndex = 0,
-                    charIndex = 0,
-                    isDeleting = false;
 
-                function type() {
-                    const current = textList[wordIndex];
-                    typingText.textContent = isDeleting ? current.substring(0, charIndex--) : current.substring(0, charIndex++);
-                    if (!isDeleting && charIndex === current.length) {
-                        isDeleting = true;
-                        setTimeout(type, 1500);
-                    } else if (isDeleting && charIndex === 0) {
-                        isDeleting = false;
-                        wordIndex = (wordIndex + 1) % textList.length;
-                        setTimeout(type, 500);
-                    } else {
-                        setTimeout(type, isDeleting ? 50 : 100);
-                    }
-                }
+<!-- Scripts -->
+<script>
+    const textList = ['UI/UX Designer', 'Photo Retoucher', 'Marketing Artist'];
+    const typingText = document.getElementById('typing-text');
+    let wordIndex = 0,
+        charIndex = 0,
+        isDeleting = false;
 
-                document.addEventListener("DOMContentLoaded", type);
+    function type() {
+        const current = textList[wordIndex];
+        typingText.textContent = isDeleting ? current.substring(0, charIndex--) : current.substring(0, charIndex++);
+        if (!isDeleting && charIndex === current.length) {
+            isDeleting = true;
+            setTimeout(type, 1500);
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % textList.length;
+            setTimeout(type, 500);
+        } else {
+            setTimeout(type, isDeleting ? 50 : 100);
+        }
+    }
 
-                document.addEventListener("DOMContentLoaded", () => {
-                    const audio = document.getElementById("hero-audio");
-                    const unlockAudio = () => {
-                        audio.play().catch(() => {});
-                        document.removeEventListener("click", unlockAudio);
-                    };
-                    document.addEventListener("click", unlockAudio);
-                });
+    document.addEventListener("DOMContentLoaded", type);
 
-                const heroSection = document.getElementById("home");
-                const heroVideo = document.getElementById("hero-video");
-                const heroAudio = document.getElementById("hero-audio");
+    document.addEventListener("DOMContentLoaded", () => {
+        const audio = document.getElementById("hero-audio");
+        const unlockAudio = () => {
+            audio.play().catch(() => {});
+            document.removeEventListener("click", unlockAudio);
+        };
+        document.addEventListener("click", unlockAudio);
+    });
 
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            heroVideo.play();
-                            heroAudio.play().catch(() => {});
-                        } else {
-                            heroVideo.pause();
-                            heroAudio.pause();
-                        }
-                    });
-                }, {
-                    threshold: 0.5
-                });
+    const heroSection = document.getElementById("home");
+    const heroVideo = document.getElementById("hero-video");
+    const heroAudio = document.getElementById("hero-audio");
 
-                observer.observe(heroSection);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                heroVideo.play();
+                heroAudio.play().catch(() => {});
+            } else {
+                heroVideo.pause();
+                heroAudio.pause();
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
 
-                document.getElementById("scrollToTopBtn").addEventListener("click", () => {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                });
+    observer.observe(heroSection);
 
-                function toggleMobileNav() {
-                    document.getElementById("mobileNav").classList.toggle("active");
-                }
-            </script>
+    document.getElementById("scrollToTopBtn").addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        </body>
+    function toggleMobileNav() {
+        document.getElementById("mobileNav").classList.toggle("active");
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
 </html>
