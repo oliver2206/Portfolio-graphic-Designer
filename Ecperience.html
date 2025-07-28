@@ -264,7 +264,7 @@
     <!-- Header -->
     <header>
         <nav class="navbar navbar-expand-lg container-fluid px-5">
-          <a class="navbar-brand fw-bold" href="./main.html">MySite</a>
+            <a class="navbar-brand fw-bold" href="./Index.html">MySite</a>
             <button class="navbar-toggler" type="button" onclick="toggleMobileNav()">
         <span class="bi bi-list fs-1"></span>
       </button>
@@ -302,44 +302,11 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-video-container">
-            <video autoplay muted loop playsinline id="hero-video">
-        <source src="./PNGFILE/Virtual Tour _ It's More Fun with You in Vigan (3).mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-            <div class="overlay"></div>
-        </div>
-
-        <div class="hero-text">
-            <h3>Hi There!</h3>
-            <h1>I Am a <span class="highlight" id="typing-text"></span></h1>
-            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#resumeModal">About Me <i class="bi bi-person-fill"></i></a>
-        </div>
-
-        <audio id="hero-audio" loop>
-      <source src="./background-music.mp3" type="audio/mpeg" />
-    </audio>
-    </section>
-
+    
     <!-- Scroll To Top -->
     <button id="scrollToTopBtn" title="Go to top">↑</button>
 
-    <!-- Resume Modal -->
-    <div class="modal fade" id="resumeModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">My Resume</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <iframe src="./PNGFILE/20241009-462596351_1088628659494015_4898831739426233640_n.jpg"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-
+   
 
     <!-- About Section -->
     <section id="about">
@@ -350,685 +317,72 @@
             </div>
         </div>
 
-        <!-- Right Side: Content -->
-        <div class="about-right">
-            <h1>About Me</h1>
-            <div class="divider"></div>
-            <p>
-                I'm Nathaniel Tolentino Oliver II, a creative web developer and designer from the Philippines. With a strong eye for design and a passion for coding, I specialize in building responsive, modern websites and web applications. I love combining aesthetics
-                with functionality to deliver meaningful digital experiences.
-            </p>
-            <ul>
-                <li><strong>Location:</strong> Magsingal, Ilocos Sur, Philippines</li>
-                <li><strong>Email:</strong> nathaniel@example.com</li>
-                <li><strong>Phone:</strong> +63 912 345 6789</li>
-                <li><strong>Skills:</strong> HTML, CSS, JavaScript, React, UI/UX Design</li>
-            </ul>
-            <div class="about-buttons">
-                <button>Explore My Work</button>
-                <a href="./Nathaniel_Oliver_CV.pdf" target="_blank">Download CV</a>
-            </div>
+      <!-- Work Experience Section Start -->
+<section id="work-experience" style="position: relative; overflow: hidden; background: #000; padding: 4rem 1rem; color: #fff;">
+    <div id="particles-js-contact" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0;"></div>
+
+    <div style="position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 2rem;">
+        <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 2rem; font-weight: bold;">WORK EXPERIENCE</h2>
+
+        <div style="text-align: center; font-size: 1.1rem; line-height: 1.8;">
+            
+            <p><strong><u>Freelance</u></strong><br>
+           
+            Video Editor. <span style="color: #ccc;">2024–2025</span></p>
+
+           
         </div>
-        <style>
-            body {
-                margin: 0;
-                font-family: Arial, sans-serif;
-            }
-            
-            section#about {
-                display: flex;
-                flex-wrap: wrap;
-                width: 100%;
-                height: 100vh;
-            }
-            
-            .about-left,
-            .about-right {
-                flex: 1;
-                min-width: 300px;
-                position: relative;
-            }
-            
-            .about-left {
-                background: url('./PNGFILE/profile.jpg') no-repeat center center/cover;
-            }
-            
-            .about-text {
-                position: absolute;
-                bottom: 60px;
-                left: 40px;
-                color: white;
-                text-shadow: 2px 2px 5px #3391ff;
-            }
-            
-            .about-text p {
-                font-size: 16px;
-                margin: 0 0 10px 0;
-            }
-            
-            .about-text h2 {
-                font-size: 28px;
-                font-weight: bold;
-                line-height: 1.4;
-                margin: 0;
-            }
-            
-            .about-right {
-                background-color: #1a1a1a;
-                color: white;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                padding: 60px;
-            }
-            
-            .about-right h1 {
-                font-size: 50px;
-                font-weight: bold;
-                color: #3391ff;
-                margin: 0;
-            }
-            
-            .divider {
-                width: 60px;
-                height: 3px;
-                background-color: #3391ff;
-                margin: 20px 0;
-            }
-            
-            .about-right p,
-            .about-right ul {
-                color: #3391ff;
-            }
-            
-            .about-right p {
-                font-size: 18px;
-                margin-bottom: 40px;
-            }
-            
-            .about-right ul {
-                font-size: 16px;
-                line-height: 1.8;
-                margin-bottom: 40px;
-                padding-left: 20px;
-            }
-            
-            .about-buttons {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 20px;
-            }
-            
-            .about-buttons button,
-            .about-buttons a {
-                padding: 12px 24px;
-                font-weight: bold;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-                box-shadow: 0 4px 10px rgba(51, 145, 255, 0.4);
-                transition: all 0.3s ease;
-                text-decoration: none;
-                display: inline-block;
-            }
-            
-            .about-buttons button {
-                background-color: white;
-                color: #3391ff;
-            }
-            
-            .about-buttons button:hover {
-                background-color: #3391ff;
-                color: white;
-            }
-            
-            .about-buttons a {
-                background-color: #3391ff;
-                color: white;
-            }
-            
-            .about-buttons a:hover {
-                background-color: #2277cc;
-            }
-            /* Responsive tweaks */
-            
-            @media (max-width: 768px) {
-                section#about {
-                    flex-direction: column;
-                    height: auto;
-                }
-                .about-left,
-                .about-right {
-                    min-height: 400px;
-                }
-                .about-text {
-                    position: static;
-                    padding: 20px;
-                }
-                .about-right {
-                    padding: 40px 20px;
-                }
-                .about-right h1 {
-                    font-size: 36px;
-                }
-            }
-        </style>
-    </section>
+    </div>
+</section>
 
+<!-- particles.js library -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
-
-
-
-    <section id="services" style="position: relative; height: auto; padding: 80px 10%; background-color: #090505; overflow: hidden;">
-        <!-- Particles.js background -->
-        <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
-
-        <div class="services-container" style="position: relative; z-index: 1;">
-            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px; color: #fff;">Our Creative Services</h2>
-            <p style="text-align: center; font-size: 1.1rem; color: #ddd; max-width: 700px; margin: 0 auto 50px;">
-                Professional solutions tailored to bring your vision to life with precision and creativity.
-            </p>
-
-            <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
-                <!-- Layout Editing -->
-                <div class="service-card" style="position: relative; height: 300px; border-radius: 12px; overflow: hidden; background: url('https://source.unsplash.com/600x400/?layout,design') center/cover no-repeat; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-                    <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5);"></div>
-                    <div style="position: relative; z-index: 2; color: white; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Layout Editing</h3>
-                        <p style="font-size: 1rem; margin-bottom: 20px;">Professional page layout design for magazines, brochures, websites with perfect typography and spacing.</p>
-                        <a href="#contact" style="background: #2196f3; color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600;">Get Started</a>
-                    </div>
-                </div>
-
-                <!-- Video Editing -->
-                <div class="service-card" style="position: relative; height: 300px; border-radius: 12px; overflow: hidden; background: url('https://source.unsplash.com/600x400/?video,editing') center/cover no-repeat; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-                    <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5);"></div>
-                    <div style="position: relative; z-index: 2; color: white; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Video Editing</h3>
-                        <p style="font-size: 1rem; margin-bottom: 20px;">High-quality video editing including color grading, transitions, effects and post-production.</p>
-                        <a href="#contact" style="background: #4caf50; color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600;">Get Started</a>
-                    </div>
-                </div>
-
-                <!-- Photo Editing -->
-                <div class="service-card" style="position: relative; height: 300px; border-radius: 12px; overflow: hidden; background: url('./20241009-462596351_1088628659494015_4898831739426233640_n.jpg') center/cover no-repeat; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-                    <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5);"></div>
-                    <div style="position: relative; z-index: 2; color: white; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Photo Editing</h3>
-                        <p style="font-size: 1rem; margin-bottom: 20px;">Professional retouching, background removal, color correction and enhancement.</p>
-                        <a href="#contact" style="background: #9c27b0; color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600;">Get Started</a>
-                    </div>
-                </div>
-
-                <!-- Graphic Design -->
-                <div class="service-card" style="position: relative; height: 300px; border-radius: 12px; overflow: hidden; background: url('https://source.unsplash.com/600x400/?graphic,design') center/cover no-repeat; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-                    <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5);"></div>
-                    <div style="position: relative; z-index: 2; color: white; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Graphic Design</h3>
-                        <p style="font-size: 1rem; margin-bottom: 20px;">Custom logos, branding materials, social media graphics and marketing collateral.</p>
-                        <a href="#contact" style="background: #ff9800; color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600;">Get Started</a>
-                    </div>
-                </div>
-
-                <!-- Motion Graphics -->
-                <div class="service-card" style="position: relative; height: 300px; border-radius: 12px; overflow: hidden; background: url('https://source.unsplash.com/600x400/?motion,graphics') center/cover no-repeat; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-                    <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5);"></div>
-                    <div style="position: relative; z-index: 2; color: white; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Motion Graphics</h3>
-                        <p style="font-size: 1rem; margin-bottom: 20px;">Animated graphics, explainer videos, title sequences and dynamic visual elements.</p>
-                        <a href="#contact" style="background: #00bcd4; color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600;">Get Started</a>
-                    </div>
-                </div>
-
-                <!-- Web Design -->
-                <div class="service-card" style="position: relative; height: 300px; border-radius: 12px; overflow: hidden; background: url('https://source.unsplash.com/600x400/?web,design') center/cover no-repeat; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-                    <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5);"></div>
-                    <div style="position: relative; z-index: 2; color: white; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Web Design</h3>
-                        <p style="font-size: 1rem; margin-bottom: 20px;">Responsive, user-friendly website designs that convert visitors into customers.</p>
-                        <a href="#contact" style="background: #e91e63; color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600;">Get Started</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Particles.js library -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-    <!-- Particles.js config -->
-    <script>
-        particlesJS("particles-js", {
-            "particles": {
-                "number": {
-                    "value": 60
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle"
-                },
-                "opacity": {
-                    "value": 0.3,
-                    "random": true
-                },
-                "size": {
-                    "value": 3,
-                    "random": true
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 120,
-                    "color": "#ffffff",
-                    "opacity": 0.2,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2
-                }
+<!-- Init Particles -->
+<script>
+    particlesJS("particles-js-contact", {
+        particles: {
+            number: {
+                value: 80,
+                density: { enable: true, value_area: 800 }
             },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    }
-                }
+            color: { value: ["#ffffff", "#0000ff"] },
+            shape: {
+                type: "circle",
+                stroke: { width: 0, color: "#000000" }
             },
-            "retina_detect": true
-        });
-    </script>
-
-
-    </section>
-
-
-    <!-- Experience -->
-    <section id="experience" style="height: 100vh; background-color: #f4f4f4; padding: 80px 10%;">
-        <h2>Experience</h2>
-        <p>Brief background of your professional experience.</p>
-    </section>
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery-section">
-        <h2 class="gallery-title">My Works</h2>
-        <p class="gallery-subtitle">Here are some projects and creative pieces I’ve worked on.</p>
-
-        <!-- Filter Buttons -->
-        <div class="gallery-filters">
-            <button class="filter-btn active">All</button>
-            <button class="filter-btn">Websites</button>
-            <button class="filter-btn">Design</button>
-            <button class="filter-btn">Mockup</button>
-        </div>
-
-        <style>
-            body {
-                margin: 0;
-                font-family: Arial, sans-serif;
-                background: #f9f9f9;
+            opacity: { value: 0.6, random: true },
+            size: { value: 3, random: true },
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: "#ffffff",
+                opacity: 0.3,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 1.5,
+                direction: "none",
+                out_mode: "out"
             }
-            
-            .gallery-section {
-                text-align: center;
-                padding: 60px 20px;
+        },
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+                onhover: { enable: true, mode: "grab" },
+                onclick: { enable: true, mode: "push" },
+                resize: true
+            },
+            modes: {
+                grab: { distance: 140, line_linked: { opacity: 0.8 } },
+                push: { particles_nb: 4 }
             }
-            
-            .gallery-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 20px;
-            }
-            
-            .gallery-item {
-                position: relative;
-                overflow: hidden;
-            }
-            
-            .gallery-item img {
-                width: 100%;
-                display: block;
-                border-top: 5px solid purple;
-            }
-            
-            .overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(128, 0, 128, 0.7);
-                color: white;
-                opacity: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                transition: opacity 0.3s ease;
-                padding: 20px;
-                text-align: center;
-            }
-            
-            .gallery-item:hover .overlay {
-                opacity: 1;
-            }
-            
-            .overlay h3 {
-                margin-bottom: 10px;
-                font-size: 20px;
-            }
-            
-            .overlay p {
-                font-size: 14px;
-            }
-            
-            .view-btn {
-                margin-top: 10px;
-                background: white;
-                color: purple;
-                padding: 8px 18px;
-                border: none;
-                border-radius: 20px;
-                font-size: 14px;
-                cursor: pointer;
-                transition: background 0.3s, color 0.3s;
-                text-decoration: none;
-            }
-            
-            .view-btn:hover {
-                background: #e0c0e0;
-                color: white;
-            }
-            /* Modal Styles */
-            
-            .modal {
-                display: none;
-                position: fixed;
-                z-index: 9999;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.9);
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-            }
-            
-            .modal.show {
-                display: flex;
-            }
-            
-            .modal-box {
-                max-width: 90%;
-                max-height: 90%;
-            }
-            
-            .modal-box img {
-                max-width: 100%;
-                max-height: 100%;
-                border: 5px solid purple;
-                border-radius: 10px;
-            }
-            
-            .close {
-                position: absolute;
-                top: 30px;
-                right: 40px;
-                color: white;
-                font-size: 40px;
-                font-weight: bold;
-                cursor: pointer;
-                transition: 0.3s;
-            }
-            
-            .close:hover {
-                color: ;
-            }
-        </style>
-        </head>
-
-        <body>
-
-            <section class="gallery-section">
-                <div class="gallery-grid">
-
-                    <!-- Gallery Item 1 -->
-                    <div class="gallery-item">
-                        <img src="./20241009-462596351_1088628659494015_4898831739426233640_n.jpg" alt="Work 1">
-                        <div class="overlay">
-                            <h3>PROJECT NAME GOES HERE 1</h3>
-                            <p>category project</p>
-                            <button class="view-btn" onclick="openModal('./20241009-462596351_1088628659494015_4898831739426233640_n.jpg')">View</button>
-                        </div>
-                    </div>
-
-                    <!-- Gallery Item 2 -->
-                    <div class="gallery-item">
-                        <img src="./work2.jpg" alt="Work 2">
-                        <div class="overlay">
-                            <h3>PROJECT NAME GOES HERE 2</h3>
-                            <p>category project</p>
-                            <button class="view-btn" onclick="openModal('./work2.jpg')">View</button>
-                        </div>
-                    </div>
-
-                    <!-- Gallery Item 3 -->
-                    <div class="gallery-item">
-                        <img src="./work3.jpg" alt="Work 3">
-                        <div class="overlay">
-                            <h3>PROJECT NAME GOES HERE 3</h3>
-                            <p>category project</p>
-                            <button class="view-btn" onclick="openModal('./work3.jpg')">View</button>
-                        </div>
-                    </div>
-
-                    <!-- Gallery Item 4 -->
-                    <div class="gallery-item">
-                        <img src="./GvbqSreaAAAcB6K.jpg" alt="Work 4">
-                        <div class="overlay">
-                            <h3>PROJECT NAME GOES HERE 4</h3>
-                            <p>category project</p>
-                            <button class="view-btn" onclick="openModal('./GvbqSreaAAAcB6K.jpg')">View</button>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- Modal Popup -->
-            <div id="galleryModal" class="modal">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <div class="modal-box">
-                    <img id="modalImage" src="" alt="Preview">
-                </div>
-            </div>
-
-            <!-- JavaScript -->
-            <script>
-                function openModal(imageSrc) {
-                    const modal = document.getElementById("galleryModal");
-                    document.getElementById("modalImage").src = imageSrc;
-                    modal.classList.add("show");
-                }
-
-                function closeModal() {
-                    const modal = document.getElementById("galleryModal");
-                    modal.classList.remove("show");
-                }
-
-                // Optional: Close modal by clicking outside the image
-                window.onclick = function(event) {
-                    const modal = document.getElementById("galleryModal");
-                    if (event.target === modal) {
-                        closeModal();
-                    }
-                };
-            </script>
-
-
-
-            <!-- Testimonials -->
-            <section id="testimonials" class="testimonial-section">
-                <div class="testimonial-container">
-                    <h2 class="testimonial-title">What Client Are Sayings</h2>
-
-                    <div class="testimonial-slide active">
-                        <div class="quote">❝</div>
-                        <p class="testimonial-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, veniam, quos optio magnam aliquid est.
-                        </p>
-                        <div class="profile">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile 1">
-                            <span>— Carl Spencer</span>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-slide">
-                        <div class="quote">❝</div>
-                        <p class="testimonial-text">
-                            Excellent service and very professional. I highly recommend their team for your next project!
-                        </p>
-                        <div class="profile">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile 2">
-                            <span>— Maria Lopez</span>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-slide">
-                        <div class="quote">❝</div>
-                        <p class="testimonial-text">
-                            They exceeded our expectations. Great design, quick delivery, and wonderful communication.
-                        </p>
-                        <div class="profile">
-                            <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Profile 3">
-                            <span>— James Cooper</span>
-                        </div>
-                    </div>
-
-                    <div class="dots">
-                        <span class="dot active" onclick="showSlide(0)"></span>
-                        <span class="dot" onclick="showSlide(1)"></span>
-                        <span class="dot" onclick="showSlide(2)"></span>
-                    </div>
-                </div>
-            </section>
-
-            <style>
-                .testimonial-section {
-                    position: relative;
-                    padding: 100px 10%;
-                    height: 100vh;
-                    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-                    color: white;
-                    text-align: center;
-                }
-                
-                .testimonial-section::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: rgba(0, 0, 0, 0.4);
-                    backdrop-filter: blur(5px);
-                    z-index: 1;
-                }
-                
-                .testimonial-container {
-                    position: relative;
-                    z-index: 2;
-                    max-width: 800px;
-                    margin: 0 auto;
-                }
-                
-                .testimonial-title {
-                    font-size: 36px;
-                    margin-bottom: 50px;
-                }
-                
-                .testimonial-slide {
-                    display: none;
-                    animation: fade 1s ease-in-out;
-                }
-                
-                .testimonial-slide.active {
-                    display: block;
-                }
-                
-                @keyframes fade {
-                    from {
-                        opacity: 0;
-                    }
-                    to {
-                        opacity: 1;
-                    }
-                }
-                
-                .quote {
-                    font-size: 60px;
-                    margin-bottom: 20px;
-                }
-                
-                .testimonial-text {
-                    font-size: 25px;
-                    font-style: italic;
-                    line-height: 1.8;
-                    color: #eee;
-                    margin-bottom: 25px;
-                }
-                
-                .profile {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 15px;
-                    font-size: 16px;
-                    color: #ddd;
-                }
-                
-                .profile img {
-                    width: 90px;
-                    height: 90px;
-                    object-fit: cover;
-                    border-radius: 50%;
-                    border: 2px solid white;
-                }
-                
-                .dots {
-                    margin-top: 30px;
-                    display: flex;
-                    justify-content: center;
-                    gap: 8px;
-                }
-                
-                .dot {
-                    width: 20px;
-                    height: 20px;
-                    background: #fff;
-                    border-radius: 50%;
-                    opacity: 0.5;
-                    cursor: pointer;
-                    transition: opacity 0.3s;
-                }
-                
-                .dot.active {
-                    opacity: 1;
-                }
-                
-                @media (max-width: 600px) {
-                    .testimonial-title {
-                        font-size: 28px;
-                    }
-                    .testimonial-text {
-                        font-size: 16px;
-                    }
-                }
-            </style>
-
+        },
+        retina_detect: true
+    });
+</script>
+<!-- Work Experience Section End -->
 
 
             <!-- Scripts -->
