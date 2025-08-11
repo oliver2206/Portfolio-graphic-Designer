@@ -526,49 +526,66 @@
 
 
     <!-- ///////////////FEATURE VIDEO////////////////////// -->
-    <section style="display: flex; align-items: center; background: #010101; padding: 60px; gap: 40px;">
-        <!-- Video Player on the left -->
-        <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
-            <video controls autoplay muted style="width: 100%; border-radius: 20px;">
-      <source src="https://youtu.be/D1__jsAHoVE" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-        </div>
+    <style>
+        .cinematic-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background: #010101;
+            padding: 60px 20px;
+            gap: 40px;
+        }
+        
+        .cinematic-section.alt {
+            background: #000;
+        }
+        
+        .cinematic-content,
+        .cinematic-video {
+            flex: 1 1 500px;
+            min-width: 300px;
+        }
+        
+        .cinematic-video video {
+            width: 100%;
+            border-radius: 20px;
+        }
+        
+        .cinematic-content h1 {
+            font-size: 2.2rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cinematic-content p {
+            font-size: 1rem;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        .cinematic-content button {
+            margin-top: 20px;
+            background-color: #0c3;
+            border: none;
+            color: white;
+            padding: 10px 24px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .cinematic-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .cinematic-content h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 
-        <!-- Text content on the right -->
-        <div style="flex: 1;">
-            <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Cinematic Description (Milk Tea – 30s Teaser)</h1>
-            <p style="font-size: 1rem; color: #ffffff; line-height: 1.6;">
-                Golden swirls of cream cascade into freshly brewed tea — slow-motion bubbles rise, ice clinks, and hands reach for the perfect sip. Set against warm afternoon light and upbeat city vibes, Teazy Taste brings you a 30-second sensory journey into the bold,
-                sweet, and refreshing world of milk tea. From classic flavors to adventurous blends, this is more than a drink — it’s a lifestyle in a cup.
-            </p>
-            <button style="margin-top: 20px; background-color: #0c3; border: none; color: white; padding: 10px 24px; font-size: 1rem; border-radius: 8px; cursor: pointer;">
-      WATCH NOW
-    </button>
-        </div>
-    </section>
-    <section style="display: flex; align-items: center; background: #000000; padding: 60px; gap: 40px;">
-        <!-- Text content on the left -->
-        <div style="flex: 1;">
-            <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Cinematic Description (Milk Tea – 30s Teaser)</h1>
-            <p style="font-size: 1rem; color: #ffffff; line-height: 1.6;">
-                Golden swirls of cream cascade into freshly brewed tea — slow-motion bubbles rise, ice clinks, and hands reach for the perfect sip. Set against warm afternoon light and upbeat city vibes, Teazy Taste brings you a 30-second sensory journey into the bold,
-                sweet, and refreshing world of milk tea. From classic flavors to adventurous blends, this is more than a drink — it’s a lifestyle in a cup.
-            </p>
-            <button style="margin-top: 20px; background-color: #0c3; border: none; color: white; padding: 10px 24px; font-size: 1rem; border-radius: 8px; cursor: pointer;">
-      WATCH NOW
-    </button>
-        </div>
-
-        <!-- Video Player on the right -->
-        <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
-            <video controls autoplay muted style="width: 100%; border-radius: 20px;">
-      <source src="https://youtu.be/D1__jsAHoVE" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-        </div>
-    </section>
-
+    <!-- Section 1: Video on left -->
 
     <!--FEATURED -->
     <!DOCTYPE html>
@@ -901,7 +918,7 @@
                     </div>
                 </div>
                 <div class="project-card" onclick="openModal('modal5')">
-                    <img src="./PNGFILE/PROJECT5.jpg" alt="Project 5">
+                    <img src="./PNGFILE/resturant logo/Artboard 1.png" alt="Project 5">
                     <div style="padding: 15px;">
                         <h3>Project 5</h3>
                         <p style="color: #ccc;">Description for project 5 goes here.</p>
@@ -977,7 +994,8 @@
                 <img class="modal-img" src="./PNGFILE/TRIPPLE EXPOSURE 1.jpg" alt="Project 2">
                 <h2>Project 2</h2>
                 <p>Detailed information about project 2. You can link more content or even embed videos.</p>
-                <a href="project2.html" target="_blank" class="project-card-button">View Full Project</a>
+                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW MORE</a>
+                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
             </div>
         </div>
 
@@ -987,7 +1005,8 @@
                 <img class="modal-img" src="./PNGFILE/TRIPPLE EXPOSURE 2.jpg" alt="Project 3">
                 <h2>Project 3</h2>
                 <p>Detailed information about project 3. You can link more content or even embed videos.</p>
-                <a href="project3.html" target="_blank" class="project-card-button">View Full Project</a>
+                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW MORE</a>
+                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
             </div>
         </div>
 
@@ -997,7 +1016,8 @@
                 <img class="modal-img" src="./PNGFILE/PROJECT4.jpg" alt="Project 4">
                 <h2>Project 4</h2>
                 <p>Detailed information about project 4. You can link more content or even embed videos.</p>
-                <a href="project4.html" target="_blank" class="project-card-button">View Full Project</a>
+                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW MORE</a>
+                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
             </div>
         </div>
 
@@ -1007,7 +1027,8 @@
                 <img class="modal-img" src="./PNGFILE/PROJECT5.jpg" alt="Project 5">
                 <h2>Project 5</h2>
                 <p>Detailed information about project 5. You can link more content or even embed videos.</p>
-                <a href="project5.html" target="_blank" class="project-card-button">View Full Project</a>
+                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW MORE</a>
+                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
             </div>
         </div>
 
@@ -1017,7 +1038,8 @@
                 <img class="modal-img" src="./PNGFILE/TEATEA.png" alt="Project 6">
                 <h2>Project 6</h2>
                 <p>Detailed information about project 6. You can link more content or even embed videos.</p>
-                <a href="project6.html" target="_blank" class="project-card-button">View Full Project</a>
+                <a href="./teazy taste.html" target="_blank" class="project-card-button">VIEW MORE</a>
+                <a href="./teazy taste.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
             </div>
         </div>
 
@@ -1027,7 +1049,8 @@
                 <img class="modal-img" src="./PNGFILE/peanut sarap.png" alt="Project 7">
                 <h2>Project 7</h2>
                 <p>Detailed information about project 7. You can link more content or even embed videos.</p>
-                <a href="project7.html" target="_blank" class="project-card-button">View Full Project</a>
+                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW MORE</a>
+                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
             </div>
         </div>
 
@@ -1037,7 +1060,8 @@
                 <img class="modal-img" src="./PNGFILE/ginatang kuhol.png" alt="Project 8">
                 <h2>Project 8</h2>
                 <p>Detailed information about project 8. You can link more content or even embed videos.</p>
-                <a href="project8.html" target="_blank" class="project-card-button">View Full Project</a>
+                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW MORE</a>
+                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
             </div>
         </div>
 
@@ -1047,7 +1071,8 @@
                 <img class="modal-img" src="./PNGFILE/PROJECT9.jpg" alt="Project 9">
                 <h2>Project 9</h2>
                 <p>Detailed information about project 9. You can link more content or even embed videos.</p>
-                <a href="project9.html" target="_blank" class="project-card-button">View Full Project</a>
+                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW MORE</a>
+                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
             </div>
         </div>
 
@@ -1057,7 +1082,8 @@
                 <img class="modal-img" src="./PNGFILE/MILKTEA 3.jpg" alt="Project 10">
                 <h2>Project 10</h2>
                 <p>Detailed information about project 10. You can link more content or even embed videos.</p>
-                <a href="project10.html" target="_blank" class="project-card-button">View Full Project</a>
+                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW MORE</a>
+                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
             </div>
         </div>
         <script>
