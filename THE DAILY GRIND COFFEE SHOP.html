@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Section with Responsive Video</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .navbar-brand {
+            color: #3391ff !important;
+        }
+        
+        .navbar-nav .nav-link {
+            color: #3391ff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar-toggler {
+            border: none;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+        
+        .navbar-toggler .bi {
+            color: #3391ff;
+        }
+        /* HERO SECTION */
+        
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            .hero-text h3 {
+                font-size: 1.2rem;
+            }
+            .hero {
+                padding: 40px 5%;
+            }
+        }
+        
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #3391ff;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(3, 3, 3, 0.2);
+            z-index: 999;
+        }
+        
+        #scrollToTopBtn:hover {
+            background: #2673cc;
+        }
+        
+        .mobile-nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 9999;
+            display: none;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: all 0.3s ease;
+            padding: 20px;
+        }
+        
+        .mobile-nav-overlay.active {
+            display: flex;
+        }
+        
+        .mobile-nav-overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2.5rem;
+            cursor: pointer;
+            color: #3391ff;
+            background: none;
+            border: none;
+        }
+        
+        .mobile-nav-overlay .social-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-right: 50px;
+        }
+        
+        .mobile-nav-overlay .social-icons a {
+            font-size: 2rem;
+            color: #3391ff;
+            transition: color 0.3s ease;
+        }
+        
+        .mobile-nav-overlay .social-icons a:hover {
+            color: #000000;
+        }
+        
+        .mobile-nav-overlay .nav-links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .mobile-nav-overlay .nav-links a {
+            font-size: 1.5rem;
+            margin: 15px 0;
+            color: #3391ff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .mobile-nav-overlay .nav-links a:hover {
+            color: #000;
+        }
+        
+        @media (min-width: 992px) {
+            .mobile-nav-overlay {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg container-fluid px-5">
+            <a class="navbar-brand fw-bold" href="./Index.html">MySite</a>
+            <button class="navbar-toggler" type="button" onclick="toggleMobileNav()">
+        <span class="bi bi-list fs-1"></span>
+      </button>
+            <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="./ABOUT.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Ecperience.html">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Testimonials.html">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div id="mobileNav" class="mobile-nav-overlay">
+        <button class="close-btn" onclick="toggleMobileNav()">&times;</button>
+        <div class="social-icons">
+            <a href="https://www.behance.net/" target="_blank"><i class="bi bi-behance"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+        </div>
+        <div class="nav-links">
+            <a href="./ABOUT.html" onclick="toggleMobileNav()">About</a>
+            <a href="./Services.html" onclick="toggleMobileNav()">Services</a>
+            <a href="./Ecperience.html" onclick="toggleMobileNav()">Experience</a>
+            <a href="./Gallery.html" onclick="toggleMobileNav()">Gallery</a>
+            <a href="./Testimonials.html" onclick="toggleMobileNav()">Testimonials</a>
+            <a href="./Contact.html" onclick="toggleMobileNav()">Contact</a>
+            <a href="./Portfolio.html" onclick="toggleMobileNav()">Portfolio</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="brand-container">
+            <!-- Image Section -->
+            <div class="image-section">
+                <img src="./PNGFILE/daily-grind-logo.png" alt="The Daily Grind Coffee Shop Logo">
+
+                <div id="brandCarousel" class="carousel slide mt-3" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./PNGFILE/daily-grind-logo.png" class="d-block w-100" alt="Main Logo">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./PNGFILE/daily-grind-alt1.png" class="d-block w-100" alt="Alternate Version 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./PNGFILE/daily-grind-alt2.png" class="d-block w-100" alt="Alternate Version 2">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#brandCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#brandCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                </div>
+            </div>
+
+            <!-- Details Section -->
+            <div class="details-section">
+                <h2>The Daily Grind Coffee Shop – Brand Identity</h2>
+                <p>
+                    The Daily Grind Coffee Shop logo blends a warm, welcoming character illustration with classic coffee culture aesthetics. The smiling barista in a white cap with a coffee bean emblem conveys friendliness, expertise, and passion for great coffee. The deep
+                    red background with steam swirl motifs reinforces the aroma, warmth, and comfort of freshly brewed coffee.
+                </p>
+
+                <h3>Logo Meaning</h3>
+                <ul>
+                    <li><strong>Barista Illustration:</strong> Represents craftsmanship, hospitality, and the human touch in every cup served.</li>
+                    <li><strong>Coffee Bean Cap Emblem:</strong> Symbolizes coffee expertise and brand focus.</li>
+                    <li><strong>Steam Swirls:</strong> Evoke the smell, warmth, and freshness of hot coffee.</li>
+                    <li><strong>Circle Layout:</strong> Creates a seal-like mark, reinforcing quality and trust.</li>
+                </ul>
+
+                <h3>Color Palette</h3>
+                <div class="color-palette">
+                    <div class="color-swatch" style="background: #7a1f21;"></div>
+                    <div class="color-swatch" style="background: #f4e5d1;"></div>
+                    <div class="color-swatch" style="background: #3c2f2f;"></div>
+                    <div class="color-swatch" style="background: #ffffff;"></div>
+                    <div class="color-swatch" style="background: #d2a679;"></div>
+                </div>
+
+                <ul>
+                    <li><strong>#7a1f21</strong> – Deep coffee red (background)</li>
+                    <li><strong>#f4e5d1</strong> – Light cream (skin tone & warmth)</li>
+                    <li><strong>#3c2f2f</strong> – Dark espresso brown (hair, beard, outlines)</li>
+                    <li><strong>#ffffff</strong> – Pure white (uniform & outer circle)</li>
+                    <li><strong>#d2a679</strong> – Golden brown (coffee bean emblem)</li>
+                </ul>
+
+                <h3>Typography</h3>
+                <p>
+                    The text uses a bold, vintage serif style in uppercase, giving the logo a timeless coffeehouse vibe. Recommended pairing: <strong>Serif display fonts</strong> for headers and <strong>clean sans-serif</strong> for body text to balance
+                    tradition with modern readability.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </section>
+
+
+    <!-- Scroll To Top -->
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+    <!-- Resume Modal -->
+    <div class="modal fade" id="resumeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">My Resume</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="./PNGFILE/20241009-462596351_1088628659494015_4898831739426233640_n.jpg"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Scripts -->
+    <script>
+        const textList = ['UI/UX Designer', 'Photo Retoucher', 'Marketing Artist'];
+        const typingText = document.getElementById('typing-text');
+        let wordIndex = 0,
+            charIndex = 0,
+            isDeleting = false;
+
+        function type() {
+            const current = textList[wordIndex];
+            typingText.textContent = isDeleting ? current.substring(0, charIndex--) : current.substring(0, charIndex++);
+            if (!isDeleting && charIndex === current.length) {
+                isDeleting = true;
+                setTimeout(type, 1500);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % textList.length;
+                setTimeout(type, 500);
+            } else {
+                setTimeout(type, isDeleting ? 50 : 100);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", type);
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const audio = document.getElementById("hero-audio");
+            const unlockAudio = () => {
+                audio.play().catch(() => {});
+                document.removeEventListener("click", unlockAudio);
+            };
+            document.addEventListener("click", unlockAudio);
+        });
+
+        const heroSection = document.getElementById("home");
+        const heroVideo = document.getElementById("hero-video");
+        const heroAudio = document.getElementById("hero-audio");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    heroVideo.play();
+                    heroAudio.play().catch(() => {});
+                } else {
+                    heroVideo.pause();
+                    heroAudio.pause();
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        observer.observe(heroSection);
+
+        document.getElementById("scrollToTopBtn").addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        function toggleMobileNav() {
+            document.getElementById("mobileNav").classList.toggle("active");
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+</html>
