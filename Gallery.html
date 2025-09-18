@@ -270,8 +270,8 @@
       </button>
             <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="./ABOUT.html">About</a></li>
-
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="./Ecperience.html">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="./Gallery.html">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="./Testimonials.html">Testimonials</a></li>
@@ -291,7 +291,7 @@
             <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
         </div>
         <div class="nav-links">
-            <a href="./ABOUT.html" onclick="toggleMobileNav()">About</a>
+            <a href="." onclick="toggleMobileNav()">About</a>
             <a href="./Services.html" onclick="toggleMobileNav()">Services</a>
             <a href="./Ecperience.html" onclick="toggleMobileNav()">Experience</a>
             <a href="./Gallery.html" onclick="toggleMobileNav()">Gallery</a>
@@ -301,873 +301,333 @@
         </div>
     </div>
 
+    <section class="gallery-section">
+        <h1>Lithstone Gallery</h1>
 
-    <section class="hero" id="home">
-        <div class="hero-video-container">
-            <video autoplay muted loop playsinline id="hero-video">
-        <source src="./PNGFILE/Virtual Tour _ It's More Fun with You in Vigan (3).mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-            <div class="overlay"></div>
-        </div>
+        <!-- First and Second Rows -->
+        <div class="gallery-container">
+            <div class="gallery-item" onclick="openModal(this)">
+                <div class="image-title">Crown Plaza Tampa</div>
+                <img src="./PNGFILE/after.png" alt="Crown Plaza Tampa">
+                <div class="label">Lithstone</div>
+            </div>
 
-        <div class="hero-text">
-            <h3>Hi There!</h3>
-            <h1>I Am a <span class="highlight" id="typing-text"></span></h1>
-            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#resumeModal">About Me <i class="bi bi-person-fill"></i></a>
-        </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <div class="image-title">Toddlers</div>
+                <img src="./PNGFILE/after.png" alt="Toddlers">
+                <div class="label">Lithstone</div>
+            </div>
 
-        <audio id="hero-audio" loop>
-      <source src="./background-music.mp3" type="audio/mpeg" />
-    </audio>
-    </section>
+            <div class="gallery-item" onclick="openModal(this)">
+                <div class="image-title">Young and restless</div>
+                <img src="./PNGFILE/after.png" alt="Young and restless">
+                <div class="label">Lithstone</div>
+            </div>
 
-    <!-- Scroll To Top -->
-    <button id="scrollToTopBtn" title="Go to top">↑</button>
+            <div class="gallery-item" onclick="openModal(this)">
+                <div class="image-title">Sweets for my sweet</div>
+                <img src="./PNGFILE/after.png" alt="Sweets for my sweet">
+                <div class="label">Lithstone</div>
+            </div>
 
-    <!-- Resume Modal -->
-    <div class="modal fade" id="resumeModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">My Resume</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <iframe src=""></iframe>
-                </div>
+            <div class="gallery-item landscape" onclick="openModal(this)">
+                <div class="image-title">River Hills Golf Club</div>
+                <img src="./PNGFILE/LANDSCAPE.jpg" alt="River Hills Golf Club">
+                <div class="label">Lithstone</div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal(this)">
+                <div class="image-title">Over the horizon</div>
+                <img src="./PNGFILE/after.png" alt="Over the horizon">
+                <div class="label">Lithstone</div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal(this)">
+                <div class="image-title">Golden Gate Breeze</div>
+                <img src="./PNGFILE/after.png" alt="Golden Gate Breeze">
+                <div class="label">Lithstone</div>
             </div>
         </div>
-    </div>
 
-
-    <!-- About Section -->
-    <section id="about">
-        <!-- Left Side: Background Image with Overlay Text -->
-        <div class="about-left">
-            <div class="about-text">
-
+        <!-- Third Row: Single Full-Width Image -->
+        <div style="max-width: 1600px; height: auto; margin: 20px auto 0 auto;">
+            <div class="gallery-item large" onclick="openModal(this)">
+                <div class="image-title">Golden Bay Suites</div>
+                <img src="./PNGFILE/LANDSCAPE.jpg" alt="Golden Bay Suites" style="width: 100%; height: auto; max-height: 500px; object-fit: cover; border-radius: 8px;">
+                <div class="label">Lithstone</div>
             </div>
         </div>
 
-        <!-- Right Side: Content -->
-        <div class="about-right">
-            <h1>About Me</h1>
-            <div class="divider"></div>
-            <p>
-                I'm Nathaniel Tolentino Oliver II, a creative web developer and designer from the Philippines. With a strong eye for design and a passion for coding, I specialize in building responsive, modern websites and web applications. I love combining aesthetics
-                with functionality to deliver meaningful digital experiences.
-            </p>
-            <ul>
-                <li><strong>Location:</strong> Magsingal, Ilocos Sur, Philippines</li>
-                <li><strong>Email:</strong> </li>
-                <li><strong>Phone:</strong></li>
-                <li><strong>Skills:</strong></li>
-            </ul>
-            <div class="about-buttons">
-                <button>Explore My Work</button>
-                <a href="./Nathaniel_Oliver_CV.pdf" target="_blank">Download CV</a>
-            </div>
+        <!-- Modal -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="modalCaption" class="caption"></div>
         </div>
         <style>
             body {
-                margin: 0;
                 font-family: Arial, sans-serif;
-            }
-            
-            section#about {
-                display: flex;
-                flex-wrap: wrap;
-                width: 100%;
-                height: 100vh;
-            }
-            
-            .about-left,
-            .about-right {
-                flex: 1;
-                min-width: 300px;
-                position: relative;
-            }
-            
-            .about-left {
-                background: url('./PNGFILE/profile.jpg') no-repeat center center/cover;
-            }
-            
-            .about-text {
-                position: absolute;
-                bottom: 60px;
-                left: 40px;
-                color: white;
-                text-shadow: 2px 2px 5px #3391ff;
-            }
-            
-            .about-text p {
-                font-size: 16px;
-                margin: 0 0 10px 0;
-            }
-            
-            .about-text h2 {
-                font-size: 28px;
-                font-weight: bold;
-                line-height: 1.4;
-                margin: 0;
-            }
-            
-            .about-right {
-                background-color: #1a1a1a;
-                color: white;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                padding: 60px;
-            }
-            
-            .about-right h1 {
-                font-size: 50px;
-                font-weight: bold;
-                color: #3391ff;
-                margin: 0;
-            }
-            
-            .divider {
-                width: 60px;
-                height: 3px;
-                background-color: #3391ff;
-                margin: 20px 0;
-            }
-            
-            .about-right p,
-            .about-right ul {
-                color: #3391ff;
-            }
-            
-            .about-right p {
-                font-size: 18px;
-                margin-bottom: 40px;
-            }
-            
-            .about-right ul {
-                font-size: 16px;
-                line-height: 1.8;
-                margin-bottom: 40px;
-                padding-left: 20px;
-            }
-            
-            .about-buttons {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 20px;
-            }
-            
-            .about-buttons button,
-            .about-buttons a {
-                padding: 12px 24px;
-                font-weight: bold;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-                box-shadow: 0 4px 10px rgba(51, 145, 255, 0.4);
-                transition: all 0.3s ease;
-                text-decoration: none;
-                display: inline-block;
-            }
-            
-            .about-buttons button {
-                background-color: white;
-                color: #3391ff;
-            }
-            
-            .about-buttons button:hover {
-                background-color: #3391ff;
-                color: white;
-            }
-            
-            .about-buttons a {
-                background-color: #3391ff;
-                color: white;
-            }
-            
-            .about-buttons a:hover {
-                background-color: #2277cc;
-            }
-            /* Responsive tweaks */
-            
-            @media (max-width: 768px) {
-                section#about {
-                    flex-direction: column;
-                    height: auto;
-                }
-                .about-left,
-                .about-right {
-                    min-height: 400px;
-                }
-                .about-text {
-                    position: static;
-                    padding: 20px;
-                }
-                .about-right {
-                    padding: 40px 20px;
-                }
-                .about-right h1 {
-                    font-size: 36px;
-                }
-            }
-        </style>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-    <!-- ///////////////FEATURE VIDEO////////////////////// -->
-    <style>
-        .cinematic-section {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            background: #010101;
-            padding: 60px 20px;
-            gap: 40px;
-        }
-        
-        .cinematic-section.alt {
-            background: #000;
-        }
-        
-        .cinematic-content,
-        .cinematic-video {
-            flex: 1 1 500px;
-            min-width: 300px;
-        }
-        
-        .cinematic-video video {
-            width: 100%;
-            border-radius: 20px;
-        }
-        
-        .cinematic-content h1 {
-            font-size: 2.2rem;
-            color: white;
-            margin-bottom: 20px;
-        }
-        
-        .cinematic-content p {
-            font-size: 1rem;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-        
-        .cinematic-content button {
-            margin-top: 20px;
-            background-color: #0c3;
-            border: none;
-            color: white;
-            padding: 10px 24px;
-            font-size: 1rem;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        
-        @media (max-width: 768px) {
-            .cinematic-section {
-                flex-direction: column;
-                text-align: center;
-            }
-            .cinematic-content h1 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
-
-    <!-- Section 1: Video on left -->
-
-    <!--FEATURED -->
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Featured Projects with Particles</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial" />
-        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-        <style>
-            * {
+                background: #f5f5f5;
                 margin: 0;
                 padding: 0;
-                box-sizing: border-box;
             }
             
-            body {
-                font-family: Arial, sans-serif;
-                background: #000;
-                overflow-x: hidden;
+            .gallery-section {
+                padding: 40px 20px;
+                background-color: #f5f5f5;
+                text-align: center;
             }
             
-            #particles-js {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 0;
-                background: #000;
+            .gallery-section h1 {
+                font-size: 2.5rem;
+                margin-bottom: 30px;
+                color: #333;
             }
             
-            #featured-projects {
-                position: relative;
-                z-index: 1;
-                padding: 60px 20px;
-            }
-            
-            .projects-grid {
+            .gallery-container {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 20px;
-                max-width: 1200px;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 15px;
+                max-width: 1600px;
                 margin: 0 auto;
             }
             
-            .project-card {
-                background: #111;
-                border-radius: 10px;
+            .gallery-item {
+                background: white;
+                border-radius: 8px;
                 overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 cursor: pointer;
-                transition: transform 0.3s ease;
             }
             
-            .project-card:hover {
-                transform: translateY(-5px);
-            }
-            
-            .project-card img {
+            .gallery-item img {
                 width: 100%;
-                height: 200px;
+                height: 300px;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+                display: block;
+            }
+            
+            .gallery-item:hover img {
+                transform: scale(1.05);
+            }
+            
+            .gallery-item.landscape {
+                grid-column: span 2;
+            }
+            
+            .image-title {
+                font-weight: bold;
+                padding: 10px;
+                font-size: 16px;
+            }
+            
+            .label {
+                padding: 8px;
+                border-top: 1px solid #ccc;
+                font-size: 14px;
+                color: #666;
+            }
+            
+            .gallery-item.large img {
+                height: 100%;
+                max-height: 400px;
                 object-fit: cover;
             }
-            
-            .project-card div {
-                padding: 15px;
-            }
-            
-            .project-card h3 {
-                color: #fff;
-                margin-bottom: 5px;
-            }
-            
-            .project-card p {
-                color: #ccc;
-                font-size: 0.9rem;
-            }
-            
-            .project-card-button {
-                margin-top: 10px;
-                display: inline-block;
-                background: #fff;
-                color: #000;
-                padding: 8px 16px;
-                border-radius: 6px;
-                font-size: 0.9rem;
-                cursor: pointer;
-                text-align: center;
-            }
+            /* Modal Styles */
             
             .modal {
                 display: none;
                 position: fixed;
-                top: 0;
+                z-index: 1000;
+                padding-top: 20px;
                 left: 0;
-                width: 100vw;
-                height: 100vh;
-                background: rgba(0, 0, 0, 0.9);
-                z-index: 999;
-                justify-content: center;
-                align-items: center;
-                padding: 20px;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.8);
             }
             
             .modal-content {
-                background: #111;
-                color: #fff;
-                padding: 30px;
-                border-radius: 12px;
-                max-width: 800px;
-                width: 100%;
-                text-align: left;
-                position: relative;
-                overflow: auto;
-                max-height: 90vh;
-            }
-            
-            .modal-close {
-                position: absolute;
-                top: 10px;
-                right: 15px;
-                font-size: 2rem;
-                color: #fff;
-                cursor: pointer;
-                background: rgba(255, 255, 255, 0.1);
-                border-radius: 50%;
-                width: 40px;
-                height: 40px;
-                line-height: 38px;
-                text-align: center;
-                transition: background 0.3s ease;
-            }
-            
-            .modal-close:hover {
-                background: rgba(255, 255, 255, 0.3);
-            }
-            
-            .modal-img {
-                width: 100%;
+                display: block;
+                margin: auto;
+                max-width: 90%;
                 max-height: 80vh;
-                object-fit: contain;
-                border-radius: 8px;
-                margin-bottom: 20px;
-                background-color: #000;
+                border-radius: 10px;
             }
             
-            @media (max-width: 600px) {
-                .modal-content {
-                    padding: 20px;
-                    font-size: 0.95rem;
-                }
-                .modal-close {
-                    font-size: 1.5rem;
-                    width: 30px;
-                    height: 30px;
-                    line-height: 28px;
-                }
-            }
-        </style>
-
-        <!-- PARTICLES BACKGROUND END-->
-
-
-        <!-- FEATURED PROJECTS -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Responsive Portfolio Projects</title>
-
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-                background: #000;
-                font-family: Arial, sans-serif;
-                color: #fff;
-            }
-            
-            h2 {
+            .caption {
+                margin: 10px auto;
                 text-align: center;
-                font-size: 2.5rem;
-                margin-bottom: 20px;
+                color: #ccc;
+                font-size: 16px;
             }
             
-            .projects-grid {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                /* Desktop */
-                gap: 20px;
-                max-width: 1200px;
-                margin: 0 auto;
+            .close {
+                position: absolute;
+                top: 25px;
+                right: 40px;
+                color: #f1f1f1;
+                font-size: 35px;
+                font-weight: bold;
+                cursor: pointer;
             }
+            /* Responsive */
             
             @media (max-width: 1200px) {
-                .projects-grid {
-                    grid-template-columns: repeat(4, 1fr);
-                    /* Large tablets */
-                }
-            }
-            
-            @media (max-width: 900px) {
-                .projects-grid {
+                .gallery-container {
                     grid-template-columns: repeat(3, 1fr);
-                    /* Tablets */
                 }
             }
             
-            @media (max-width: 700px) {
-                .projects-grid {
+            @media (max-width: 768px) {
+                .gallery-container {
                     grid-template-columns: repeat(2, 1fr);
-                    /* Large phones */
+                }
+                .gallery-item.landscape {
+                    grid-column: span 2;
+                }
+                .gallery-item img {
+                    height: 220px;
+                }
+                .gallery-item.large img {
+                    height: 440px;
                 }
             }
             
             @media (max-width: 480px) {
-                .projects-grid {
+                .gallery-container {
                     grid-template-columns: 1fr;
-                    /* Small phones */
                 }
-            }
-            
-            .project-card {
-                background: #111;
-                border-radius: 10px;
-                overflow: hidden;
-                transition: transform 0.3s;
-                cursor: pointer;
-            }
-            
-            .project-card:hover {
-                transform: scale(1.02);
-            }
-            
-            .project-card img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
-            }
-            
-            .project-card-button {
-                margin-top: 10px;
-                display: inline-block;
-                padding: 8px 16px;
-                background-color: #fff;
-                color: #000;
-                border-radius: 5px;
-                font-weight: bold;
-                text-align: center;
-                cursor: pointer;
-            }
-            
-            .modal {
-                display: none;
-                position: fixed;
-                z-index: 999;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                overflow: auto;
-                background-color: rgba(0, 0, 0, 0.9);
-                justify-content: center;
-                align-items: center;
-            }
-            
-            .modal-content {
-                background-color: #222;
-                margin: auto;
-                padding: 20px;
-                max-width: 600px;
-                border-radius: 10px;
-                text-align: center;
-            }
-            
-            .modal-img {
-                max-width: 100%;
-                height: auto;
-                margin-bottom: 20px;
-                border-radius: 10px;
-            }
-            
-            .modal-close {
-                position: absolute;
-                top: 20px;
-                right: 30px;
-                font-size: 2rem;
-                color: white;
-                cursor: pointer;
+                .gallery-item img {
+                    height: 200px;
+                }
+                .gallery-item.landscape {
+                    grid-column: span 1;
+                }
+                .gallery-item.large img {
+                    height: 200px;
+                }
             }
         </style>
-    </head>
-
-    <body>
-
-        <section id="featured-projects" style="padding: 60px 20px;">
-            <h2>Featured Portfolio Projects</h2>
-
-            <div class="projects-grid">
-                <!-- Project Cards -->
-                <div class="project-card" onclick="openModal('modal1')">
-                    <img src="./PNGFILE/PORTRAIT.jpg" alt="Project 1">
-                    <div style="padding: 15px;">
-                        <h3>Project 1</h3>
-                        <p style="color: #ccc;">Description for project 1 goes here.</p>
-                        <div class="project-card-button">View Details</div>
-                    </div>
-                </div>
-                <div class="project-card" onclick="openModal('modal2')">
-                    <img src="./PNGFILE/TRIPPLE EXPOSURE 1.jpg" alt="Project 2">
-                    <div style="padding: 15px;">
-                        <h3>Project 2</h3>
-                        <p style="color: #ccc;">Description for project 2 goes here.</p>
-                        <div class="project-card-button">View Details</div>
-                    </div>
-                </div>
-                <div class="project-card" onclick="openModal('modal3')">
-                    <img src="./PNGFILE/TRIPPLE EXPOSURE 2.jpg" alt="Project 3">
-                    <div style="padding: 15px;">
-                        <h3>Project 3</h3>
-                        <p style="color: #ccc;">Description for project 3 goes here.</p>
-                        <div class="project-card-button">View Details</div>
-                    </div>
-                </div>
-                <div class="project-card" onclick="openModal('modal4')">
-                    <img src="./PNGFILE/Untitled-1.png" alt="Project 4">
-                    <div style="padding: 15px;">
-                        <h3>Project 4</h3>
-                        <p style="color: #ccc;">Description for project 4 goes here.</p>
-                        <div class="project-card-button">View Details</div>
-                    </div>
-                </div>
-                <div class="project-card" onclick="openModal('modal5')">
-                    <img src="" alt="Project 5">
-                    <div style="padding: 15px;">
-                        <h3>Project 5</h3>
-                        <p style="color: #ccc;">Description for project 5 goes here.</p>
-                        <div class="project-card-button">View Details</div>
-                    </div>
-                </div>
-                <div class="project-card" onclick="openModal('modal6')">
-                    <img src="./PNGFILE/TEATEA.png" alt="Project 6">
-                    <div style="padding: 15px;">
-                        <h3>Project 6</h3>
-                        <p style="color: #ccc;">Description for project 6 goes here.</p>
-                        <div class="project-card-button">View Details</div>
-                    </div>
-                </div>
-                <div class="project-card" onclick="openModal('modal7')">
-                    <img src="./PNGFILE/peanut sarap.png" alt="Project 7">
-                    <div style="padding: 15px;">
-                        <h3>Project 7</h3>
-                        <p style="color: #ccc;">Description for project 7 goes here.</p>
-                        <div class="project-card-button">View Details</div>
-                    </div>
-                </div>
-                <div class="project-card" onclick="openModal('modal8')">
-                    <img src="./PNGFILE/ginatang kuhol.png" alt="Project 8">
-                    <div style="padding: 15px;">
-                        <h3>Project 8</h3>
-                        <p style="color: #ccc;">Description for project 8 goes here.</p>
-                        <div class="project-card-button">View Details</div>
-                    </div>
-                </div>
-                <div class="project-card" onclick="openModal('modal9')">
-                    <img src="./PNGFILE/PROJECT9.jpg" alt="Project 9">
-                    <div style="padding: 15px;">
-                        <h3>Project 9</h3>
-                        <p style="color: #ccc;">Description for project 9 goes here.</p>
-                        <div class="project-card-button">View Details</div>
-                    </div>
-                </div>
-                <div class="project-card" onclick="openModal('modal10')">
-                    <img src="./PNGFILE/MILKTEA 3.jpg" alt="Project 10">
-                    <div style="padding: 15px;">
-                        <h3>Project 10</h3>
-                        <p style="color: #ccc;">Description for project 10 goes here.</p>
-                        <div class="project-card-button">View Details</div>
-                    </div>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="./Portfolio.html" style="text-decoration: none;">
-                    <button style="padding: 12px 24px; font-size: 1rem; background: #fff; color: #000; border: none; border-radius: 8px; cursor: pointer;">
-          View All Projects
-        </button>
-                </a>
-            </div>
-        </section>
-
-        <!-- Each modal matches a project card -->
-        <div id="modal1" class="modal" onclick="closeOnOutsideClick(event)">
-            <div class="modal-content">
-                <div class="modal-close" onclick="closeModal('modal1')">&times;</div>
-                <img class="modal-img" src="./PNGFILE/PORTRAIT.jpg" alt="Project 1">
-                <h2>Project 1</h2>
-                <p>Detailed information about project 1. You can link more content or even embed videos.</p>
-                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW MORE</a>
-                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
-            </div>
-        </div>
-
-        <div id="modal2" class="modal" onclick="closeOnOutsideClick(event)">
-            <div class="modal-content">
-                <div class="modal-close" onclick="closeModal('modal2')">&times;</div>
-                <img class="modal-img" src="./PNGFILE/TRIPPLE EXPOSURE 1.jpg" alt="Project 2">
-                <h2>Project 2</h2>
-                <p>Detailed information about project 2. You can link more content or even embed videos.</p>
-                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW MORE</a>
-                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
-            </div>
-        </div>
-
-        <div id="modal3" class="modal" onclick="closeOnOutsideClick(event)">
-            <div class="modal-content">
-                <div class="modal-close" onclick="closeModal('modal3')">&times;</div>
-                <img class="modal-img" src="./PNGFILE/TRIPPLE EXPOSURE 2.jpg" alt="Project 3">
-                <h2>Project 3</h2>
-                <p>Detailed information about project 3. You can link more content or even embed videos.</p>
-                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW MORE</a>
-                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
-            </div>
-        </div>
-
-        <div id="modal4" class="modal" onclick="closeOnOutsideClick(event)">
-            <div class="modal-content">
-                <div class="modal-close" onclick="closeModal('modal4')">&times;</div>
-                <img class="modal-img" src="./PNGFILE/Untitled-1.png" alt="Project 4">
-                <h2>Project 4</h2>
-                <p>Detailed information about project 4. You can link more content or even embed videos.</p>
-                <a href="./THE DAILY GRIND COFFEE SHOP.html" target="_blank" class="project-card-button">VIEW MORE</a>
-                <a href="./THE DAILY GRIND COFFEE SHOP.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
-            </div>
-        </div>
-
-        <div id="modal5" class="modal" onclick="closeOnOutsideClick(event)">
-            <div class="modal-content">
-                <div class="modal-close" onclick="closeModal('modal5')">&times;</div>
-                <img class="modal-img" src="" alt="Project 5">
-                <h2>Project 5</h2>
-                <p>Detailed information about project 5. You can link more content or even embed videos.</p>
-                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW MORE</a>
-                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
-            </div>
-        </div>
-
-        <div id="modal6" class="modal" onclick="closeOnOutsideClick(event)">
-            <div class="modal-content">
-                <div class="modal-close" onclick="closeModal('modal6')">&times;</div>
-                <img class="modal-img" src="./PNGFILE/TEATEA.png" alt="Project 6">
-                <h2>Project 6</h2>
-                <p>Detailed information about project 6. You can link more content or even embed videos.</p>
-                <a href="./teazy taste.html" target="_blank" class="project-card-button">VIEW MORE</a>
-                <a href="./teazy taste.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
-            </div>
-        </div>
-
-        <div id="modal7" class="modal" onclick="closeOnOutsideClick(event)">
-            <div class="modal-content">
-                <div class="modal-close" onclick="closeModal('modal7')">&times;</div>
-                <img class="modal-img" src="./PNGFILE/peanut sarap.png" alt="Project 7">
-                <h2>Project 7</h2>
-                <p>Detailed information about project 7. You can link more content or even embed videos.</p>
-                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW MORE</a>
-                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
-            </div>
-        </div>
-
-        <div id="modal8" class="modal" onclick="closeOnOutsideClick(event)">
-            <div class="modal-content">
-                <div class="modal-close" onclick="closeModal('modal8')">&times;</div>
-                <img class="modal-img" src="./PNGFILE/ginatang kuhol.png" alt="Project 8">
-                <h2>Project 8</h2>
-                <p>Detailed information about project 8. You can link more content or even embed videos.</p>
-                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW MORE</a>
-                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
-            </div>
-        </div>
-
-        <div id="modal9" class="modal" onclick="closeOnOutsideClick(event)">
-            <div class="modal-content">
-                <div class="modal-close" onclick="closeModal('modal9')">&times;</div>
-                <img class="modal-img" src="./PNGFILE/PROJECT9.jpg" alt="Project 9">
-                <h2>Project 9</h2>
-                <p>Detailed information about project 9. You can link more content or even embed videos.</p>
-                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW MORE</a>
-                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
-            </div>
-        </div>
-
-        <div id="modal10" class="modal" onclick="closeOnOutsideClick(event)">
-            <div class="modal-content">
-                <div class="modal-close" onclick="closeModal('modal10')">&times;</div>
-                <img class="modal-img" src="./PNGFILE/MILKTEA 3.jpg" alt="Project 10">
-                <h2>Project 10</h2>
-                <p>Detailed information about project 10. You can link more content or even embed videos.</p>
-                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW MORE</a>
-                <a href="./dsfgh.html" target="_blank" class="project-card-button">VIEW FULL PROJECT</a>
-            </div>
-        </div>
         <script>
-            function openModal(id) {
-                document.getElementById(id).style.display = 'flex';
+            function openModal(el) {
+                const img = el.querySelector('img');
+                const caption = el.querySelector('.image-title').textContent;
+
+                document.getElementById("modalImage").src = img.src;
+                document.getElementById("modalCaption").innerText = caption;
+                document.getElementById("imageModal").style.display = "block";
             }
 
-            function closeModal(id) {
-                document.getElementById(id).style.display = 'none';
+            function closeModal() {
+                document.getElementById("imageModal").style.display = "none";
             }
 
-            function closeOnOutsideClick(event) {
-                if (event.target.classList.contains('modal')) {
-                    event.target.style.display = 'none';
+            window.onclick = function(event) {
+                const modal = document.getElementById("imageModal");
+                if (event.target === modal) {
+                    closeModal();
                 }
             }
         </script>
-        <!-- Scripts -->
-        <script>
-            const textList = ['UI/UX Designer', 'Photo Retoucher', 'Marketing Artist'];
-            const typingText = document.getElementById('typing-text');
-            let wordIndex = 0,
-                charIndex = 0,
+
+    </section>
+
+    <!-- Image Carousel -->
+    <div id="imageCarousel" class="carousel slide mt-5" data-bs-ride="carousel" style="max-width: 1600px; margin: auto;">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./PNGFILE/after.png" class="d-block w-100" alt="Slide 1" style="max-height: 500px; object-fit: cover;">
+            </div>
+            <div class="carousel-item">
+                <img src="./PNGFILE/LANDSCAPE.jpg" class="d-block w-100" alt="Slide 2" style="max-height: 500px; object-fit: cover;">
+            </div>
+            <div class="carousel-item">
+                <img src="./PNGFILE/after.png" class="d-block w-100" alt="Slide 3" style="max-height: 500px; object-fit: cover;">
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+    </div>
+
+
+
+    <!-- Scripts -->
+    <script>
+        const textList = ['UI/UX Designer', 'Photo Retoucher', 'Marketing Artist'];
+        const typingText = document.getElementById('typing-text');
+        let wordIndex = 0,
+            charIndex = 0,
+            isDeleting = false;
+
+        function type() {
+            const current = textList[wordIndex];
+            typingText.textContent = isDeleting ? current.substring(0, charIndex--) : current.substring(0, charIndex++);
+            if (!isDeleting && charIndex === current.length) {
+                isDeleting = true;
+                setTimeout(type, 1500);
+            } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
+                wordIndex = (wordIndex + 1) % textList.length;
+                setTimeout(type, 500);
+            } else {
+                setTimeout(type, isDeleting ? 50 : 100);
+            }
+        }
 
-            function type() {
-                const current = textList[wordIndex];
-                typingText.textContent = isDeleting ? current.substring(0, charIndex--) : current.substring(0, charIndex++);
-                if (!isDeleting && charIndex === current.length) {
-                    isDeleting = true;
-                    setTimeout(type, 1500);
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    wordIndex = (wordIndex + 1) % textList.length;
-                    setTimeout(type, 500);
+        document.addEventListener("DOMContentLoaded", type);
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const audio = document.getElementById("hero-audio");
+            const unlockAudio = () => {
+                audio.play().catch(() => {});
+                document.removeEventListener("click", unlockAudio);
+            };
+            document.addEventListener("click", unlockAudio);
+        });
+
+        const heroSection = document.getElementById("home");
+        const heroVideo = document.getElementById("hero-video");
+        const heroAudio = document.getElementById("hero-audio");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    heroVideo.play();
+                    heroAudio.play().catch(() => {});
                 } else {
-                    setTimeout(type, isDeleting ? 50 : 100);
+                    heroVideo.pause();
+                    heroAudio.pause();
                 }
-            }
-
-            document.addEventListener("DOMContentLoaded", type);
-
-            document.addEventListener("DOMContentLoaded", () => {
-                const audio = document.getElementById("hero-audio");
-                const unlockAudio = () => {
-                    audio.play().catch(() => {});
-                    document.removeEventListener("click", unlockAudio);
-                };
-                document.addEventListener("click", unlockAudio);
             });
+        }, {
+            threshold: 0.5
+        });
 
-            const heroSection = document.getElementById("home");
-            const heroVideo = document.getElementById("hero-video");
-            const heroAudio = document.getElementById("hero-audio");
+        observer.observe(heroSection);
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        heroVideo.play();
-                        heroAudio.play().catch(() => {});
-                    } else {
-                        heroVideo.pause();
-                        heroAudio.pause();
-                    }
-                });
-            }, {
-                threshold: 0.5
+        document.getElementById("scrollToTopBtn").addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
+        });
 
-            observer.observe(heroSection);
+        function toggleMobileNav() {
+            document.getElementById("mobileNav").classList.toggle("active");
+        }
+    </script>
 
-            document.getElementById("scrollToTopBtn").addEventListener("click", () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
-            function toggleMobileNav() {
-                document.getElementById("mobileNav").classList.toggle("active");
-            }
-        </script>
+</html>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-
-    </html>
